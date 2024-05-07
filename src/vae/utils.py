@@ -1,4 +1,5 @@
 import torch
+import numpy as np
 from src.vae import VAE, MolDataModule
 
 
@@ -28,6 +29,9 @@ def load_vae(
 
     return dm, vae
 
+class DemoDataset():
+    vocab: np.ndarray[str]
+
 def load_vae_demo(
     file_path: str = "data/processed/zmc.smi",
     model_path: str = "checkpoints/vae/zmc/checkpoint.pt",
@@ -38,6 +42,8 @@ def load_vae_demo(
     dm = MolDataModule(file_path)
     dm.max_len = 72
     dm.vocab_size = 244
+    dm.dataset = DemoDataset()
+    dm.dataset.vocab = np.load('vocab.npy')
 
     vae = VAE(
         max_len=72,
