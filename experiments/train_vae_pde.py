@@ -102,10 +102,10 @@ class VAE_PDE_MODEL(L.LightningModule):
 
         # Get rid of JVP loss
         pde_loss = (
-                       results.loss_ic
-                       + results.loss_pde / self.pde.pde.half_range
-                       # + results.loss_cls
-                   ) * self.pde_lambda
+            results.loss_ic
+            + results.loss_pde / self.pde.pde.half_range
+            # + results.loss_cls
+        ) * self.pde_lambda
 
         loss = vae_loss + pde_loss
 
