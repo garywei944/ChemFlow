@@ -30,7 +30,7 @@ We are working on a live demo for the paper. Stay tuned!
       See [Notes on Compiling AutoDock-GPU](#notes-on-compiling-autodock-gpu).
     * (Recommended) `mv .env.defaults .env` and specify `PROJECT_PATH` in `.env`. It is later used to run the
       experiments in the project root directory.
-* [Download data](#download-data--model-checkpoints) and put it in the `data/processed` directory.
+* [Download data](#download-data--model-checkpoints) and put it in the `data` directory.
 * Train the VAE model by running `python experiments/train_vae.py`.
     * (Optional) Download our pre-trained VAE model checkpoint,
       see [Download Data & Model Checkpoints](#download-data--model-checkpoints).
