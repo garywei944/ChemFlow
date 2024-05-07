@@ -1,2 +1,2 @@
-from .generator import Generator, MoFlowGenerator, VAEGenerator, PropGenerator
+from .generator import Generator, VAEGenerator, PropGenerator
 from .aux_classifier import AuxClassifier
