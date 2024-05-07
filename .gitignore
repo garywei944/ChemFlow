@@ -26,6 +26,8 @@ src/chemspace/boundaries_*/*
 *.pdbqt
 *.xml
 
+!/*.png
+
 ### Python template
 # Byte-compiled / optimized / DLL files
 __pycache__/
