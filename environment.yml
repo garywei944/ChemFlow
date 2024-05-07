@@ -1,0 +1,89 @@
+# Typical conda environment for a reproducible machine learning project
+# Use `mamba env create -f environment.yml`
+# or `conda env create -f environment.yml` to install the environment
+# Created and maintained by garywei944(garywei944@gmail.com)
+
+name: chemflow
+channels:
+  - rdkit
+  - schrodinger # for pymol
+  - nvidia # for CUDA
+  - pytorch
+  - huggingface
+  - conda-forge
+  - anaconda
+  - defaults
+dependencies:
+  - python=3.10
+  - pip~=23.1.2
+  - cython
+  - cudatoolkit=11.8
+  - pytorch-cuda=11.8
+  - cudnn=8.8.0 # https://docs.nvidia.com/deeplearning/cudnn/support-matrix/index.html
+
+  # System utils
+  - psutil
+
+  # essential functionality
+  - overrides
+  - python-dotenv
+  - absl-py
+  - tqdm
+  - attrs
+
+  # argparse
+  - typed-argument-parser # for type hinting in argparse
+
+  # Frameworks
+  - numpy~=1.26.2
+  - scipy
+  - pandas
+  - openpyxl # to open excel files
+  - pandarallel # for parallel computing panda dataframe
+
+  # AI4Science
+  - selfies~=2.1.1
+  - rdkit~=2023.09.3
+  - openbabel~=3.1.1
+  - pymol-bundle~=3.0.2
+
+  # Gary: Stop installing autodock-gpu from conda, the default compilation
+  # doesn't support many commonly used GPU including RTX 3080, 3090, A100, etc.
+  # See
+  # https://github.com/ccsb-scripps/AutoDock-GPU/issues/172#issuecomment-1010263229
+  # https://github.com/ccsb-scripps/AutoDock-GPU/issues/134#issuecomment-829788330
+  #  - autodock-gpu~=1.5.3  # autodock has to be compiled directly from
+
+  - pyg~=2.3
+
+  # PyTorch
+  - pytorch~=2.1.2
+  - torchinfo
+
+  # Huggingface
+  - transformers~=4.36.1
+  - datasets~=2.15.0
+  - accelerate~=0.25.0
+  - evaluate~=0.4.0
+  - tokenizers>=0.13.1 # https://stackoverflow.com/a/74386742
+
+  # Lightning
+  - lightning~=2.1.3
+  - torchmetrics # lighting metrics
+
+  # Visualization
+  - matplotlib
+  - seaborn
+
+  # Development
+  - jupyter
+  - wandb
+
+  # If you need to install pip packages, don't do `pip install xxx`
+  # Add the package here and run `mamba env update -f environment.yml --prune`
+  # for dependency completeness.
+  - pip:
+      - PyTDC==0.4.1
+      # https://github.com/Lightning-AI/pytorch-lightning/blob/master/requirements/pytorch/extra.txt
+      - lightning[pytorch-extra]~=2.1.3
+      - cd2root
