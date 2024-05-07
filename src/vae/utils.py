@@ -29,11 +29,15 @@ def load_vae(
     return dm, vae
 
 def load_vae_demo(
+    file_path: str = "data/processed/zmc.smi",
     model_path: str = "checkpoints/vae/zmc/checkpoint.pt",
     latent_dim: int = 1024,
     embedding_dim: int = 128,
     device=torch.device("cuda" if torch.cuda.is_available() else "cpu"),
 ) -> tuple[MolDataModule, VAE]:
+    dm = MolDataModule(file_path)
+    dm.max_len = 72
+    dm.vocab_size = 244
 
     vae = VAE(
         max_len=72,
@@ -48,4 +52,4 @@ def load_vae_demo(
         p.requires_grad = False
     vae.eval()
 
-    return None, vae
+    return dm, vae
