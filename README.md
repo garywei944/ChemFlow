@@ -19,9 +19,9 @@ We propose a unifying framework to characterize latent structures by flows/diffu
 }
 ```
 
-## Live Demo Coming Soon!
+## Live Demo!
 
-Try our online demo [here](https://colab.research.google.com/drive/1QAy_QoEnDRaiLF6kJ6RyhuGx1qCJXYKm?usp=sharing)!
+Try our live demo [here](https://colab.research.google.com/drive/1QAy_QoEnDRaiLF6kJ6RyhuGx1qCJXYKm?usp=sharing)!
 
 ## Quick Start
 
