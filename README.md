@@ -1,7 +1,7 @@
 # ChemFlow: Navigating Chemical Space with Latent Flows
 
-This repo implements the paper 🔗: Navigating Chemical Space with Latent Flows by Guanghao Wei*, Yining Huang*, Chenru
-Duan, Yue Song, and Yuanqi Du.
+This repo implements the paper 🔗: [Navigating Chemical Space with Latent Flows](https://arxiv.org/abs/2405.03987) by
+Guanghao Wei*, Yining Huang*, Chenru Duan, Yue Song, and Yuanqi Du.
 
 Flows can uncover meaningful structures of latent spaces learned by generative models!
 We propose a unifying framework to characterize latent structures by flows/diffusions for optimization and traversal.
@@ -9,11 +9,11 @@ We propose a unifying framework to characterize latent structures by flows/diffu
 ![](ChemFlow-Fig-wide.png)
 
 ```bibtex
-@misc{Wei2024navigating,
+@misc{wei2024navigating,
     title = {Navigating Chemical Space with Latent Flows},
     author = {Guanghao Wei and Yining Huang and Chenru Duan and Yue Song and Yuanqi Du},
     year = {2024},
-    eprint = {N/A},
+    eprint = {2405.03987},
     archivePrefix = {arXiv},
     primaryClass = {cs.LG}
 }
