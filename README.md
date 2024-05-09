@@ -6,7 +6,7 @@ Guanghao Wei*, Yining Huang*, Chenru Duan, Yue Song, and Yuanqi Du.
 Flows can uncover meaningful structures of latent spaces learned by generative models!
 We propose a unifying framework to characterize latent structures by flows/diffusions for optimization and traversal.
 
-![](ChemFlow.pdf)
+![](ChemFlow.png)
 
 ## Live Demo
 
