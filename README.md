@@ -8,20 +8,12 @@ We propose a unifying framework to characterize latent structures by flows/diffu
 
 ![](ChemFlow-Fig-wide.png)
 
-```bibtex
-@misc{wei2024navigating,
-    title = {Navigating Chemical Space with Latent Flows},
-    author = {Guanghao Wei and Yining Huang and Chenru Duan and Yue Song and Yuanqi Du},
-    year = {2024},
-    eprint = {2405.03987},
-    archivePrefix = {arXiv},
-    primaryClass = {cs.LG}
-}
-```
-
 ## Live Demo
 
 Try our live demo [here](https://colab.research.google.com/drive/1QAy_QoEnDRaiLF6kJ6RyhuGx1qCJXYKm?usp=sharing)!
+
+![](Demo.gif)
+
 
 ## Quick Start
 
@@ -54,7 +46,7 @@ Try our live demo [here](https://colab.research.google.com/drive/1QAy_QoEnDRaiLF
 
 ### Additional Arguments for the scripts
 
-I used `lightning`([doc](https://lightning.ai/docs/pytorch/stable/cli/lightning_cli.html))
+We used `lightning`([doc](https://lightning.ai/docs/pytorch/stable/cli/lightning_cli.html))
 and `tap`([doc](https://github.com/swansonk14/typed-argument-parser)) to parse the arguments.
 Usually, to pass in the arguments configured by `lightning`, some commands are like:
 
@@ -101,4 +93,16 @@ To test if the compilation is successful, run the following command:
 ```bash
 obabel -:"CCN(CCCCl)OC1=CC2=C(Cl)C1C3=C2CCCO3" -O demo.pdbqt -p 7.4 --partialcharge gasteiger --gen3d
 autodock_gpu_128wi -M data/raw/1err/1err.maps.fld -L demo.pdbqt -s 0 -N demo
+```
+
+## Cite Us
+```bibtex
+@misc{wei2024navigating,
+    title = {Navigating Chemical Space with Latent Flows},
+    author = {Guanghao Wei and Yining Huang and Chenru Duan and Yue Song and Yuanqi Du},
+    year = {2024},
+    eprint = {2405.03987},
+    archivePrefix = {arXiv},
+    primaryClass = {cs.LG}
+}
 ```
