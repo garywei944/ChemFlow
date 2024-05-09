@@ -9,7 +9,8 @@ We propose a unifying framework to characterize latent structures by flows/diffu
 
 ## Live Demo
 
-Try our live demo [here](https://colab.research.google.com/drive/1QAy_QoEnDRaiLF6kJ6RyhuGx1qCJXYKm?usp=sharing)!
+For anonymous purposes, we provide the jupyter notebook file to run the demo.
+Please upload and open [ChemFlowDemo.ipynb](ChemFlowDemo.ipynb) in your Google Colab to enjoy the interactive demo!
 
 ![](Demo.gif)
 
