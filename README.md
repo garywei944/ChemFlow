@@ -98,11 +98,11 @@ autodock_gpu_128wi -M data/raw/1err/1err.maps.fld -L demo.pdbqt -s 0 -N demo
 ## Cite Us
 ```bibtex
 @misc{wei2024navigating,
-    title = {Navigating Chemical Space with Latent Flows},
-    author = {Guanghao Wei and Yining Huang and Chenru Duan and Yue Song and Yuanqi Du},
-    year = {2024},
-    eprint = {2405.03987},
-    archivePrefix = {arXiv},
-    primaryClass = {cs.LG}
+      title={Navigating Chemical Space with Latent Flows}, 
+      author={Guanghao Wei and Yining Huang and Chenru Duan and Yue Song and Yuanqi Du},
+      year={2024},
+      eprint={2405.03987},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
 }
 ```
