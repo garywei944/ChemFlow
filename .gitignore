@@ -169,3 +169,4 @@ dmypy.json
 cython_debug/
 
 !.gitkeep
+!download_data.txt
