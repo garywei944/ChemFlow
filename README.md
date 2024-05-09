@@ -20,7 +20,7 @@ Try our live demo [here](https://colab.research.google.com/drive/1QAy_QoEnDRaiLF
 * Install all dependencies with `conda env create -f environment.yml`.
     * (Optional) Install [AutoDock-GPU](https://github.com/ccsb-scripps/AutoDock-GPU)      for docking binding affinity.
       See [Notes on Compiling AutoDock-GPU](#notes-on-compiling-autodock-gpu).
-    * (Recommended) `mv .env.defaults .env` and specify `PROJECT_PATH` in `.env`. It is later used to run the
+    * (Recommended) `mv .env.defaults .env` and specify `PROJECT_PATH` in `.env`. This is later used to run the
       experiments in the project root directory.
 * [Download data](#download-data--model-checkpoints) and put it in the `data` directory.
 * Train the VAE model by running `python experiments/train_vae.py`.
@@ -48,7 +48,7 @@ Try our live demo [here](https://colab.research.google.com/drive/1QAy_QoEnDRaiLF
 
 We used `lightning`([doc](https://lightning.ai/docs/pytorch/stable/cli/lightning_cli.html))
 and `tap`([doc](https://github.com/swansonk14/typed-argument-parser)) to parse the arguments.
-Usually, to pass in the arguments configured by `lightning`, some commands are like:
+Following is an example command to pass in arguments configured by `lightning`:
 
 ```bash
 python experiments/supervised/train_prop_predictor.py \
@@ -62,7 +62,7 @@ python experiments/supervised/train_prop_predictor.py \
 
 ## Download Data & Model Checkpoints
 
-We extract 4,253,577 molecules from the three commonly used datasets for drug discovery
+We extracted 4,253,577 molecules from the three commonly used datasets for drug discovery
 including [MOSES](https://github.com/molecularsets/moses), [ZINC250K](https://zinc.docking.org/)([download](https://www.kaggle.com/datasets/basu369victor/zinc250k/data)),
 and [ChEMBL](https://www.ebi.ac.uk/chembl/).
 
@@ -76,8 +76,8 @@ The conda version of `AutoDock-GPU` is not compatible with RTX 3080 & 3090.
 So don't use `environment.yml` to install `AutoDock-GPU`.
 Make sure to follow this [issue](https://github.com/ccsb-scripps/AutoDock-GPU/issues/172#issuecomment-1010263229) to
 compile the source code.
-A good reference to the SM code
-is [here](https://arnon.dk/matching-sm-architectures-arch-and-gencode-for-various-nvidia-cards/).
+A good reference for the SM code
+can be found [here](https://arnon.dk/matching-sm-architectures-arch-and-gencode-for-various-nvidia-cards/).
 
 Some commands might be useful:
 
